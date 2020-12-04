@@ -7,3 +7,4 @@ macro(add_test_executable NAME)
 endmacro()
 
 add_test_executable(test_run test_run.cpp)
+add_test_executable(test_file test_file.cpp)
