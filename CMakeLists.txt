@@ -9,6 +9,7 @@ enable_testing()
 include_directories(include)
 
 set(SOURCES src/gbase.cpp
+            src/error.cpp
             src/fs/file.cpp
             )
 
