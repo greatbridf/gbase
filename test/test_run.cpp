@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-class A : public interface {
+class A : public gb::interface {
  public:
     void fuck();
 };
