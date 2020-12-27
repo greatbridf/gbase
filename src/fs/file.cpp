@@ -1,11 +1,11 @@
 #include <gbase/fs/file.hpp>
 
-template<>
+template <>
 bool gb::input_file::writable() const
 {
     return false;
 }
-template<>
+template <>
 bool gb::output_file::readable() const
 {
     return false;

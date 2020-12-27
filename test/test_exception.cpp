@@ -9,14 +9,11 @@ void func_throw()
 
 int main()
 {
-    try
-    {
+    try {
         func_throw();
-    }
-    catch(const std::exception& e)
-    {
+    } catch (const std::exception& e) {
         std::cerr << "exception caught: " << e.what() << '\n';
     }
-    
+
     return 0;
 }

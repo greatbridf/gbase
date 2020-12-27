@@ -2,7 +2,8 @@
 
 #include <iostream>
 
-void gb::greetings() {
+void gb::greetings()
+{
     byte a = 10;
     std::cout << "Hello World! " << (unsigned int)a << std::endl;
 }
