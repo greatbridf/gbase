@@ -2,6 +2,8 @@
 
 #include <ostream>
 
+#include <gbase/net/socket_types.hpp>
+
 namespace gb
 {
     typedef unsigned char byte;
