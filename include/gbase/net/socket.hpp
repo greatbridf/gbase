@@ -79,11 +79,13 @@ public:
     explicit server_socket(port_t port);
     server_socket(const char* ip, port_t port);
 
-    bool bind();
     bool listen();
     std::unique_ptr<client_socket> accept();
 
     size_t max_queue_length = DEFAULT_SERVER_SOCKET_QUEUE_LENGTH;
+
+private:
+    bool bind();
 };
 
 // tcp ipv4 socket buffer
