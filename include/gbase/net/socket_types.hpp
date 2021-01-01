@@ -1,5 +1,9 @@
 #pragma once
 
+#include <stddef.h>
+#include <stdint.h>
+#include <time.h>
+
 #ifndef GB_DEFAULT_SOCKET_TIMEOUT
 #define GB_DEFAULT_SOCKET_TIMEOUT 30
 #endif
@@ -13,6 +17,12 @@
 #endif
 
 namespace gb {
+typedef int socket_type;
+
+typedef int domain_type;
+typedef int socket_type_type;
+typedef int protocol_type;
+
 typedef uint16_t port_t;
 
 enum socket_states {
