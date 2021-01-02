@@ -37,7 +37,7 @@ protected:
     {
         if (_socket.state() == socket_states::CLOSED)
             return EOF;
-        ssize_t n = ::recv(_socket._socket, eback(), DEFAULT_SOCKET_BUFFER_SIZE, 0);
+        ssize_t n = _socket.n_receive(eback(), DEFAULT_SOCKET_BUFFER_SIZE);
 
         if (n <= 0) {
             _socket.close();
@@ -59,7 +59,7 @@ protected:
         size_t total = pptr() - pbase();
 
         while (sent < total) {
-            ssize_t n = ::send(_socket._socket, _w_buf, total - sent, 0);
+            ssize_t n = _socket.n_send(_w_buf, total - sent, 0);
 
             if (n > 0) {
                 sent += n;

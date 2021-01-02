@@ -49,6 +49,26 @@ public:
         _state = CLOSED;
     }
 
+    ssize_t n_receive(void* buf, size_t max_size, int flags)
+    {
+        return ::recv(_socket, buf, max_size, flags);
+    }
+
+    ssize_t n_receive(void* buf, size_t max_size)
+    {
+        return n_receive(buf, max_size, 0);
+    }
+
+    ssize_t n_send(void const* buf, size_t size, int flags)
+    {
+        return ::send(_socket, buf, size, flags);
+    }
+
+    ssize_t n_send(void const* buf, size_t size)
+    {
+        return n_send(buf, size, 0);
+    }
+
     friend socket_buf;
 
 protected:
