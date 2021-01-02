@@ -3,19 +3,23 @@
 #include <iostream>
 
 class data : public gb::serializable {
-    public:
-    data(int a, const char* b) : _a(a), _b(b) {};
+public:
+    data(int a, const char* b)
+        : _a(a)
+        , _b(b) {};
 
-    std::string toString() const override {
+    std::string toString() const override
+    {
         return "the data consists of " + std::to_string(_a) + " and \"" + _b + '\"';
     }
 
-    private:
+private:
     int _a;
     const char* _b;
 };
 
-int main() {
+int main()
+{
     std::cout << data(1, "fuckyou") << std::endl;
     return 0;
 }

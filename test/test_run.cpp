@@ -3,15 +3,17 @@
 #include <iostream>
 
 class A : public gb::interface {
- public:
+public:
     void fuck();
 };
 
-void A::fuck() {
+void A::fuck()
+{
     std::cout << "fuckyou" << std::endl;
 }
 
-int main() {
+int main()
+{
     gb::greetings();
 
     A fuck;

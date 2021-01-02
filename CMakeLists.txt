@@ -11,9 +11,23 @@ include_directories(include)
 set(SOURCES src/gbase.cpp
             src/error.cpp
             src/fs/file.cpp
+            src/net/socket.cpp
             )
 
-add_library(gbase ${SOURCES})
+set(HEADERS include/gbase/error.hpp
+            include/gbase/gbase.hpp
+            include/gbase/types.hpp
+            include/gbase/fs.hpp
+            include/gbase/fs/file.hpp
+            include/gbase/net.hpp
+            include/gbase/net/socket_fwd.hpp
+            include/gbase/net/basic_socket.hpp
+            include/gbase/net/basic_socket_buf.hpp
+            include/gbase/net/socket.hpp
+            include/gbase/net/socket_types.hpp
+            )
+
+add_library(gbase ${SOURCES} ${HEADERS})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
