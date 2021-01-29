@@ -11,6 +11,7 @@ include_directories(include)
 set(SOURCES src/gbase.cpp
             src/error.cpp
             src/fs/file.cpp
+            src/io/string.cpp
             src/net/socket.cpp
             )
 
@@ -19,6 +20,8 @@ set(HEADERS include/gbase/error.hpp
             include/gbase/types.hpp
             include/gbase/fs.hpp
             include/gbase/fs/file.hpp
+            include/gbase/io.hpp
+            include/gbase/io/string.hpp
             include/gbase/net.hpp
             include/gbase/net/socket_fwd.hpp
             include/gbase/net/basic_socket.hpp
