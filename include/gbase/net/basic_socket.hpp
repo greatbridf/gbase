@@ -14,7 +14,7 @@ public:
         close();
     }
 
-    sockaddr* const addr() const
+    sockaddr* addr() const
     {
         return (sockaddr* const) & _addr;
     }

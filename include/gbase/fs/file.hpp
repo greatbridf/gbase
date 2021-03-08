@@ -36,8 +36,8 @@ bool output_file::readable() const;
 // realizations
 template <typename T>
 basic_file<T>::basic_file(std::string _name)
-    : _filename(std::move(_name))
-    , T(_name)
+    : T(_name)
+    , _filename(_name)
     , _size(-1)
 {
 }

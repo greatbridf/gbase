@@ -10,6 +10,8 @@ enable_testing()
 
 include_directories(include)
 
+add_compile_options(-Wall -Wextra -Werror -pedantic)
+
 set(SOURCES src/gbase.cpp
             src/error.cpp
             src/fs/file.cpp
