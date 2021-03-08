@@ -69,6 +69,11 @@ public:
         return n_send(buf, size, 0);
     }
 
+    socket_type underlying_socket() const
+    {
+        return _socket;
+    }
+
     friend socket_buf;
 
 protected:
