@@ -15,7 +15,7 @@ inline unsigned char uchar_to_hex(unsigned char c)
     }
 }
 
-std::string uchar_arr_to_string(const unsigned char* arr, size_t n)
+std::string gb::io::uchar_arr_to_string(const unsigned char* arr, size_t n)
 {
     std::string str;
     for (size_t i = 0; i < n; ++i) {
